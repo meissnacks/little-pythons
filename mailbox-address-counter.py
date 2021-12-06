@@ -13,18 +13,17 @@ for line in fhand:
         words = line.split()
         sender = words[1]
         counts[sender] = counts.get(sender, 0) +1
-print(counts)
+print("Final Tally: " + str(counts))
 
 #This determines who has the most messages in the file. 
 
 vals = list(counts.values())
 print(vals)
 maximum = max(vals)
-print(maximum)
 
 keys = list()
 for key, value in counts.items():
     if value == maximum:
-        print(key, value)
+        print("The most emails came from " + str(key) + ", with " + str(value) + " messages received,")
 
 
